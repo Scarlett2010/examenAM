@@ -1,0 +1,17 @@
+.card-background {
+    --box-shadow: none; 
+  }
+
+ion-item {
+    --padding-start: 0;
+    
+  }
+
+ion-card-title {
+    text-align: center;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center; 
+  }

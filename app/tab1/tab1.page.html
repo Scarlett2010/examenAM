@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Tab 1 </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let libro of libros; let i = index" class="card-background">
+    <ion-card-header>
+      <ion-card-title>Libro {{ i + 1 }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" [src]="imagenesDePerros[i]" />
+          </ion-thumbnail>
+          <ion-label>{{ libro.title }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    <div class="button-container ion-padding">
+      <ion-button
+        expand="block"
+        (click)="guardarLibro(libro, imagenesDePerros[i])"
+      >
+        Guardar
+      </ion-button>
+    </div>
+  </ion-card>
+</ion-content>
